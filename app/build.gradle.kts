@@ -38,11 +38,26 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+
+// ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+
+    // LiveData (optional, if you use LiveData)
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
+
+    // Lifecycle runtime (needed for lifecycle awareness)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
+
+    // Optional: For observing lifecycle in non-UI classes
+    implementation("androidx.lifecycle:lifecycle-common-java8:2.8.4")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -57,4 +72,5 @@ dependencies {
     testImplementation("androidx.arch.core:core-testing:2.2.0")
 // Turbine (Flow testing)
     testImplementation("app.cash.turbine:turbine:1.0.0")
+
 }
